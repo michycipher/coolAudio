@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!--  -->
+<link rel="icon" href="photos/michuo.png" >
+
+    <title>CoolAudio | Homepage</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- NAV -->
+        <nav>
+            <img class="a" src="photos/michuo.png" alt="logo image">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Connect</a></li>
+            </ul>
+        </nav>
+        <!-- END OF NAV -->
+
+        <!-- HEADER -->
+        <div class="header-content">
+            <div class="left">
+                <h1>the real sound</h1>
+            </div>
+
+            <div class="right">
+                <p>click here to listen</p>
+                <img src="photos/play.png" alt="play button" id="icon">
+            </div>
+
+        </div>
+        <!-- END OF HEADER -->
+    </div>
+<!-- END OF CONTAINER DIV -->
+
+
+    <!-- AUDIO -->
+    <audio id="mySong">
+        <source src="photos/song.mp3" type="audio/mp3">
+    </audio>
+
+
+
+<!-- JAVASCRIPT -->
+    <script>
+        var mySong = document.getElementById("mySong");
+        var icon = document.getElementById("icon");
+
+        icon.onclick = function () {
+            if (mySong.paused) {
+                mySong.play();
+                icon.src = "photos/pause.png";
+            } else {
+                mySong.pause();
+                icon.src = "photos/play.png";
+            }
+        }
+    </script>
+</body>
+
+</html>
